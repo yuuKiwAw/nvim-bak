@@ -1,0 +1,7 @@
+require("yuki.plugins-setup")
+require("yuki.core.options")
+require("yuki.core.keymaps")
+require("yuki.core.colorscheme")
+require("yuki.plugins.nvim-tree")
+require("yuki.plugins.lualine")
+require("yuki.plugins.telescope")
