@@ -69,7 +69,9 @@ return packer.startup(function(use)
 
     -- git signs
     use("lewis6991/gitsigns.nvim")
-    -- use("tpope/vim-fugitive")
+
+    -- cmake tool
+    use("Civitasv/cmake-tools.nvim")
 
 
     if packer_bootstrap then
