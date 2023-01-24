@@ -70,8 +70,8 @@ return packer.startup(function(use)
     -- git signs
     use("lewis6991/gitsigns.nvim")
 
-    -- cmake tool
-    use("Civitasv/cmake-tools.nvim")
+    -- terminal
+    use({"akinsho/toggleterm.nvim", tag = "*"})
 
 
     if packer_bootstrap then
