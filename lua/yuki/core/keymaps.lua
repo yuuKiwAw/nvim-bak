@@ -16,6 +16,12 @@ keymap.set("n", "<leader>tw", ":tabclose<CR>")
 keymap.set("n", "<leader>tn", ":tabn<CR>")
 keymap.set("n", "<leader>tp", ":tabp<CR>")
 
+-- window resize
+keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
+keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
+keymap.set("n", "<C-Down>", ":resize +2<CR>")
+keymap.set("n", "<C-Up>", ":resize -2<CR>")
+
 -- nvim-tree
 keymap.set("n", "<leader>m", ":NvimTreeToggle<CR>")
 
@@ -26,3 +32,6 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
 
+-- bufferline keymap
+keymap.set("n", "<leader>h", "<cmd>BufferLineCyclePrev<cr>")
+keymap.set("n", "<leader>l", "<cmd>BufferLineCycleNext<cr>")

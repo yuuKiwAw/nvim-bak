@@ -21,7 +21,8 @@ return packer.startup(function(use)
 
     use("nvim-lua/plenary.nvim")
 
-    use("bluz71/vim-nightfly-guicolors")
+    -- use("bluz71/vim-nightfly-guicolors")
+    use({ "catppuccin/nvim", as = "catppuccin" })
 
     -- tmux & split window navigation
     use("christoomey/vim-tmux-navigator")
@@ -79,6 +80,9 @@ return packer.startup(function(use)
 
     -- indent guide
     use("lukas-reineke/indent-blankline.nvim")
+
+    -- Comment
+    use({ 'numToStr/Comment.nvim' })
 
 
     if packer_bootstrap then

@@ -1,8 +1,10 @@
-local status, lualine = pcall(require, "lualine")
-if not status then
-    return
-end
+-- Eviline config for lualine
+-- Author: shadmansaleh
+-- Credit: glepnir
+local lualine = require('lualine')
 
+-- Color table for highlights
+-- stylua: ignore
 local colors = {
     bg       = '#202328',
     fg       = '#bbc2cf',
@@ -31,8 +33,10 @@ local conditions = {
     end,
 }
 
+-- Config
 local config = {
     options = {
+        -- Disable sections and component separators
         component_separators = '',
         section_separators = '',
         theme = {
@@ -61,7 +65,7 @@ local config = {
         lualine_z = {},
         lualine_c = {},
         lualine_x = {},
-    }
+    },
 }
 
 -- Inserts a component in lualine_c at left section
@@ -86,7 +90,6 @@ ins_left {
     -- mode component
     function()
         return ''
-        -- return ''
     end,
     color = function()
         -- auto change color according to neovims mode
@@ -117,11 +120,11 @@ ins_left {
     padding = { right = 1 },
 }
 
--- ins_left {
--- filesize component
--- 'filesize',
--- cond = conditions.buffer_not_empty,
--- }
+ins_left {
+    -- filesize component
+    'filesize',
+    cond = conditions.buffer_not_empty,
+}
 
 ins_left {
     'filename',
@@ -131,7 +134,7 @@ ins_left {
 
 ins_left { 'location' }
 
--- ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
+ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
 
 ins_left {
     'diagnostics',
@@ -144,17 +147,15 @@ ins_left {
     },
 }
 
-
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
-ins_left {
-    function()
-        return '%='
-    end,
-}
+-- ins_left {
+--     function()
+--         return '%='
+--     end,
+-- }
 
---[[
-ins_left {
+ins_right {
     -- Lsp server name .
     function()
         local msg = 'No Active Lsp'
@@ -174,7 +175,6 @@ ins_left {
     icon = ' LSP:',
     color = { fg = '#ffffff', gui = 'bold' },
 }
---]]
 
 -- Add components to right sections
 ins_right {
@@ -210,11 +210,13 @@ ins_right {
 }
 
 ins_right {
-     function()
+    function()
         return '▊'
     end,
     color = { fg = colors.blue },
     padding = { left = 1 },
 }
 
+-- Now don't forget to initialize lualine
 lualine.setup(config)
+
