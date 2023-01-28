@@ -37,3 +37,7 @@ opt.splitbelow = true
 
 -- table line
 opt.showtabline = 2
+
+-- move scrolloff
+opt.scrolloff = 8
+opt.sidescrolloff = 8
