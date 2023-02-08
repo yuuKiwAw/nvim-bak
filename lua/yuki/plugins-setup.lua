@@ -33,6 +33,9 @@ return packer.startup(function(use)
     -- icons
     use("kyazdani42/nvim-web-devicons")
 
+    -- dashboard nvim
+    use("glepnir/dashboard-nvim")
+
     -- lualine
     use("nvim-lualine/lualine.nvim")
 
@@ -63,6 +66,7 @@ return packer.startup(function(use)
     -- use({ "glepnir/lspsaga.nvim", branch = "main" })
     -- use("jose-elias-alvarez/typescript.nvim")
     use("onsails/lspkind.nvim")
+    use("j-hui/fidget.nvim")
 
     -- treesitter
     use({
@@ -82,7 +86,10 @@ return packer.startup(function(use)
     use("lukas-reineke/indent-blankline.nvim")
 
     -- Comment
-    use({ 'numToStr/Comment.nvim' })
+    use("numToStr/Comment.nvim")
+
+    -- Project
+    use("ahmedkhalf/project.nvim")
 
 
     if packer_bootstrap then
